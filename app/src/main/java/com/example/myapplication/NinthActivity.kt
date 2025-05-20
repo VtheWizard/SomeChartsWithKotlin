@@ -54,7 +54,6 @@ class NinthActivity : AppCompatActivity() {
 
         val scatterDataSet = ScatterDataSet(scatterEntries, "height vs weight").apply {
             color = Color.BLUE
-            var scatterShape = ScatterChart.ScatterShape.CIRCLE
             scatterShapeSize = 10f
         }
 
@@ -81,7 +80,6 @@ class NinthActivity : AppCompatActivity() {
         val sumY = entries.sumOf { it.y.toDouble() }
         val sumXY = entries.sumOf { (it.x * it.y).toDouble() }
         val sumX2 = entries.sumOf { (it.x * it.x).toDouble() }
-
         val slope = ((n * sumXY) - (sumX * sumY)) / ((n * sumX2) - (sumX * sumX))
         val intercept = (sumY - (slope * sumX)) / n
 
