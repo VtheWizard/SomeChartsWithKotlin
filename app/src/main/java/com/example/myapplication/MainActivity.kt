@@ -5,8 +5,6 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         val button6: Button = findViewById(R.id.button6)
         val button7: Button = findViewById(R.id.button7)
         val button8: Button = findViewById(R.id.button8)
+        val button9: Button = findViewById(R.id.button9)
 
         button1.setOnClickListener {
             val intent = Intent(this, FirstActivity::class.java)
@@ -55,7 +54,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, EighthActivity::class.java)
             startActivity(intent)
         }
-
+        button9.setOnClickListener {
+            val intent = Intent(this, NinthActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 }
