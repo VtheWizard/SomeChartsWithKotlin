@@ -49,7 +49,7 @@ class NinthActivity : AppCompatActivity() {
         val (slope, intercept) = calculateLinearRegression(scatterEntries)
         val trendlineEntries = listOf(
             Entry(150f, slope * 150f + intercept),
-            Entry(198f, slope * 198f + intercept)
+            Entry(222f, slope * 222f + intercept)
         )
 
         val scatterDataSet = ScatterDataSet(scatterEntries, "height vs weight").apply {
@@ -71,6 +71,7 @@ class NinthActivity : AppCompatActivity() {
         chart.description.isEnabled = false
         chart.axisRight.isEnabled = false
         chart.data = combinedData
+        chart.animateXY(1200,1500)
         chart.invalidate()
     }
 
