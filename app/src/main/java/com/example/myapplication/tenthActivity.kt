@@ -30,10 +30,10 @@ class tenthActivity : AppCompatActivity() {
         val h0 = 1.5f         // initial height (meters)
         val v0 = 10f          // initial upward velocity (m/s)
         val g = 9.8f          // gravity (m/s²)
-        val timeStep = 0.1f   // seconds between points
-        val maxTime = 2.5f    // total duration
+        val timeStep = 0.1f
+        val maxTime = 2.5f
 
-        // Generate parabolic line (ideal curve)
+        // Generate parabolic line with ideal curve
         val lineEntries = mutableListOf<Entry>()
         var t = 0f
         while (t <= maxTime) {
@@ -49,7 +49,7 @@ class tenthActivity : AppCompatActivity() {
             setDrawValues(false)
         }
 
-        // Simulated real scatter points (measured data)
+        // measured scatter points (measured data)
         val scatterEntries = listOf(
             Entry(0.0f, 1.5f),
             Entry(0.2f, 2.9f),
