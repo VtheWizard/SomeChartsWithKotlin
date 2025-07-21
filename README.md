@@ -1,9 +1,10 @@
-SomeChartsWithKotlin
+**SomeChartsWithKotlin**
 
 Welcome to the MPAndroidChart example project!
 This project is designed for students who want to learn how to create visual charts in Android apps using Kotlin.
 Hopefully at least some of the charts are acceptable.
-Android studio really wanted all the files in master branch so that is where you find all of that.
+
+Android studio really wanted all the files in **master branch** so that is where you find all of that.
 Actualy important bits in app/src/main/java/com/example/myapplication in the master branch.
 
 
