@@ -31,7 +31,7 @@ class FourthActivity : AppCompatActivity() {
         dataSet.color = Color.MAGENTA
         dataSet.setDrawFilled(true)
         val yAxis = chart.yAxis
-        yAxis.axisMinimum = 0f
+        yAxis.axisMinimum = 0f                      //chart starts at 0 instead of whatever the lowest value is
         yAxis.axisMaximum = 8f
         val labels = listOf("Agility", "Intellect", "Stamina", "Spirit", "Strength", "Player Skill")
         chart.data = RadarData(dataSet)
@@ -42,7 +42,7 @@ class FourthActivity : AppCompatActivity() {
         //chart.animateXY(1000, 1000)
         chart.description.text = "Radar Chart on a players statistics"
         chart.webColor = Color.LTGRAY
-        chart.invalidate()
+        chart.invalidate()        //this will also reset the chart if needed at some point
 
 
     }

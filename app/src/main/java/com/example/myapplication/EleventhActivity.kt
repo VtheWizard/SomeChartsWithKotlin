@@ -26,7 +26,9 @@ class EleventhActivity : AppCompatActivity() {
         button.setOnClickListener {
             val expressionString = input.text.toString()
             val entries = mutableListOf<Entry>()
-
+            //farely limited graphical calculator ok... no drawing circles pls... or do, if you cba doing some work yourself :P
+            //try "sin(x) * log(x^2 + 1)" or "tan(sqrt(abs(x))) + sin(x^2)" for example
+            //somehow got "exp(-x^2) * (sin(5x)^2 + cos(3x)^2) + log(x^2 + 1)" to plot
             for (x in -100..100) {
                 val xVal = x / 10f
                 try {
@@ -39,11 +41,10 @@ class EleventhActivity : AppCompatActivity() {
                     entries.add(Entry(xVal, y))
 
                 } catch (e: Exception) {
-                    input.error = "Invalid equation!"
+                    input.error = "Invalid equation! Don't get too fancy!"
                     return@setOnClickListener
                 }
             }
-
             val dataSet = LineDataSet(entries, "f(x)").apply {
                 lineWidth = 2f
                 color = resources.getColor(android.R.color.holo_blue_dark)
@@ -53,7 +54,7 @@ class EleventhActivity : AppCompatActivity() {
 
             chart.data = LineData(dataSet)
             chart.description.text = "Graph of your equation"
-            chart.invalidate()
+            chart.invalidate()      //finally get to the updating part of these charts with this
         }
     }
 }

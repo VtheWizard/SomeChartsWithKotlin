@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
         val button10: Button = findViewById(R.id.button10)
         val button11: Button = findViewById(R.id.button11)
 
+        //uncomment lines to compare how charts change
+        //On Click listeners on all buttons to go to different charts in their own activities
         button1.setOnClickListener {
             val intent = Intent(this, FirstActivity::class.java)
             startActivity(intent)

@@ -46,6 +46,7 @@ class NinthActivity : AppCompatActivity() {
             Entry(198f, 95f)
         )
 
+        //math in a seperate function
         val (slope, intercept) = calculateLinearRegression(scatterEntries)
         val trendlineEntries = listOf(
             Entry(150f, slope * 150f + intercept),
@@ -64,6 +65,7 @@ class NinthActivity : AppCompatActivity() {
             setDrawCircles(false)
         }
 
+        //setting charts ontop eachother with combined chart
         val combinedData = CombinedData()
         combinedData.setData(ScatterData(scatterDataSet))
         combinedData.setData(LineData(trendlineDataSet))
@@ -75,6 +77,7 @@ class NinthActivity : AppCompatActivity() {
         chart.invalidate()
     }
 
+    //some math
     private fun calculateLinearRegression(entries: List<Entry>): Pair<Float, Float> {
         val n = entries.size
         val sumX = entries.sumOf { it.x.toDouble() }

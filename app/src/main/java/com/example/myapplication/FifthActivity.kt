@@ -27,6 +27,8 @@ class FifthActivity : AppCompatActivity() {
         )
         val dataSet = BubbleDataSet(entries, "likes, shares, reach")
         val xAxis = chart.xAxis
+        // uncommenting will result bubbles not clipping the sides
+        // as minimum and maximum ranges are set to appropriate values
         //xAxis.axisMinimum = 0f
         //xAxis.axisMaximum = 5f
         dataSet.setDrawValues(true)
@@ -35,7 +37,7 @@ class FifthActivity : AppCompatActivity() {
         //chart.animateY(1000)            //simple animation
         chart.description.text = "Bubble Chart on Social media posts"
         chart.data = BubbleData(dataSet)
-        chart.invalidate()
+        chart.invalidate()        //this will also reset the chart if needed at some point
 
 
     }

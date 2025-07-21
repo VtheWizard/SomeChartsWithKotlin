@@ -28,14 +28,15 @@ class FirstActivity : AppCompatActivity() {
             Entry(6f, 250f)
         )
         val dataSet = LineDataSet(entries, "Faked Website traffic")
+        //uncomment to see how the chart changes
         chart.setDrawGridBackground(false)
         //dataSet.setDrawFilled(true)                 //fills the area below line
         //chart.isDragEnabled = true
         chart.setScaleEnabled(true)
-        //chart.animateX(1000, Easing.EaseInCubic)
+        //chart.animateX(1000, Easing.EaseInCubic)    //simple animation
         chart.description.text = "Line Chart showing Website traffic"
         chart.data = LineData(dataSet)
-        chart.invalidate()
+        chart.invalidate()   //this will also reset the chart if needed at some point
 
     }
 }

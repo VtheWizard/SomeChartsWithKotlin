@@ -37,12 +37,12 @@ class ThirdActivity : AppCompatActivity() {
         chart.setUsePercentValues(true)
         //chart.setDrawHoleEnabled(true)          //enables the whole in the middle
         //chart.holeRadius = 40f
-        //chart.transparentCircleRadius = 45f
+        //chart.transparentCircleRadius = 60f     //two-tone sectors
         chart.centerText = "Most spoken languages"
-        //chart.animateXY(1400, 1400)
+        //chart.animateXY(1400, 1400)             //animation
         chart.legend.isWordWrapEnabled = true
         chart.data = PieData(dataSet)
-        chart.invalidate()
+        chart.invalidate()       //this will also reset the chart if needed at some point
 
     }
 }

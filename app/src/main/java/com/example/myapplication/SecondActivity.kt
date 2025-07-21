@@ -50,9 +50,9 @@ class SecondActivity : AppCompatActivity() {
         chart.axisRight.isEnabled = false
         chart.xAxis.granularity = 1f
         //chart.animateY(1800)            //simple animation that rises the bars from the x axis
-        chart.description.text = "Bar Chart on some companys monthly sales"
+        chart.description.text = "Bar Chart on some companys monthly sales" //adds a description to the chart
         chart.data = BarData(dataSet)
-        chart.invalidate()
+        chart.invalidate()      //this will also reset the chart if needed at some point
 
     }
 }

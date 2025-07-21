@@ -43,7 +43,7 @@ class SixthActivity : AppCompatActivity() {
             Entry(198f, 95f)
         )
         val dataSet = ScatterDataSet(entries, "Height and Weight")
-        dataSet.setScatterShape(ScatterChart.ScatterShape.TRIANGLE)
+        dataSet.setScatterShape(ScatterChart.ScatterShape.TRIANGLE) //try different shapes, maybe you could find out a way to add custom images
         dataSet.color = Color.DKGRAY
         dataSet.scatterShapeSize = 20f
         chart.description.text = "Scatter: height vs weight"
@@ -53,7 +53,7 @@ class SixthActivity : AppCompatActivity() {
         //chart.axisLeft.axisMaximum = 100f
         //chart.animateXY(1000, 1000)
         chart.data = ScatterData(dataSet)
-        chart.invalidate()
+        chart.invalidate()         //this will also reset the chart if needed at some point
 
 
     }

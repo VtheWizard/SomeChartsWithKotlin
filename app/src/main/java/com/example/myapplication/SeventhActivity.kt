@@ -20,6 +20,14 @@ class SeventhActivity : AppCompatActivity() {
         setContentView(R.layout.activity_seventh)
 
         val chart = findViewById<CandleStickChart>(R.id.candleStickChart)
+
+        //CandleEntry(0f, 155f, 145f, 150f, 152f) where:
+        //1st argument is index
+        //2nd argument is highest value     (thin line highest value during a period)
+        //3rd argument is lowest value      (thin line lowest value during a period)
+        //4th argument is value at opening  (thick line that usualy starts where previous ended)
+        //5th argument is value at closing  (thick line that ends where next usually starts)
+        //congradulations, you now know understand candlestick charts when trading for stocks, crypto, etc.
         val entries = listOf(
             CandleEntry(0f, 155f, 145f, 150f, 152f),
             CandleEntry(1f, 158f, 147f, 152f, 157f),
@@ -34,10 +42,10 @@ class SeventhActivity : AppCompatActivity() {
         )
         val dataSet = CandleDataSet(entries, "Stock Price")
         dataSet.shadowColor = Color.DKGRAY
-        dataSet.shadowWidth = 0.8f
-        dataSet.decreasingColor = Color.RED
+        dataSet.shadowWidth = 1f
+        dataSet.decreasingColor = Color.RED                 //making thick bar red when loosing money :(
         dataSet.decreasingPaintStyle = Paint.Style.FILL
-        dataSet.increasingColor = Color.GREEN
+        dataSet.increasingColor = Color.GREEN               //making thick bar green when gaining money :)
         dataSet.increasingPaintStyle = Paint.Style.FILL
         dataSet.neutralColor = Color.LTGRAY
         dataSet.setDrawValues(false)

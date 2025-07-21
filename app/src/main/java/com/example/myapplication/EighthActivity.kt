@@ -47,6 +47,7 @@ class EighthActivity : AppCompatActivity() {
             setDrawValues(false)
             mode = LineDataSet.Mode.CUBIC_BEZIER
         }
+
         val combinedChart = findViewById<CombinedChart>(R.id.combinedChart)
         val xAxis = combinedChart.xAxis
         //xAxis.axisMinimum = 0f
@@ -56,7 +57,7 @@ class EighthActivity : AppCompatActivity() {
         //xAxis.valueFormatter = IndexAxisValueFormatter(listOf("", "Q1", "Q2", "Q3", "Q4", ""))
         val barData = BarData(barDataSet)
         val lineData = LineData(lineDataSet)
-        val combinedData = CombinedData()
+        val combinedData = CombinedData() //combining data
         combinedData.setData(barData)
         combinedData.setData(lineData)
         combinedChart.data = combinedData
