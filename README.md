@@ -22,13 +22,13 @@ PieChart
 
 Clone the repository:
 
-git clone https://github.com/VtheWizard/SomeChartsWithKotlin.git
+```git clone https://github.com/VtheWizard/SomeChartsWithKotlin.git```
 
 Open the project in Android Studio
 
 Make sure your build.gradle (Module: app) includes the following line:
 
-implementation 'com.github.PhilJay:MPAndroidChart:3.1.0'
+```implementation 'com.github.PhilJay:MPAndroidChart:3.1.0'```
 
 Sync Gradle
 
@@ -37,7 +37,7 @@ Sync Gradle
 1. LineChartActivity.kt
 
 Line chart that displays a simple time series.
-
+```
 val entries = listOf(
     Entry(0f, 1f),
     Entry(1f, 3f),
@@ -49,11 +49,11 @@ dataSet.color = Color.BLUE
 val data = LineData(dataSet)
 lineChart.data = data
 lineChart.invalidate()
-
+```
 2. BarChartActivity.kt
 
 Bar chart for comparing values.
-
+```
 val entries = listOf(
     BarEntry(0f, 4f),
     BarEntry(1f, 6f),
@@ -63,11 +63,11 @@ val dataSet = BarDataSet(entries, "Bar Data")
 dataSet.colors = ColorTemplate.COLORFUL_COLORS.toList()
 barChart.data = BarData(dataSet)
 barChart.invalidate()
-
+```
 3. PieChartActivity.kt
 
 Pie chart for showing category proportions.
-
+```
 val entries = listOf(
     PieEntry(40f, "A"),
     PieEntry(30f, "B"),
@@ -77,7 +77,7 @@ val dataSet = PieDataSet(entries, "Distribution")
 dataSet.setColors(*ColorTemplate.MATERIAL_COLORS)
 pieChart.data = PieData(dataSet)
 pieChart.invalidate()
-
+```
 📝 Student Exercises
 
 Try adding date labels to the X-axis in LineChart
