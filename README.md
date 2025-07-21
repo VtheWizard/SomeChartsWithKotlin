@@ -1,5 +1,3 @@
-
-
 SomeChartsWithKotlin
 
 Welcome to the MPAndroidChart example project!
@@ -8,14 +6,6 @@ Hopefully at least some of the charts are acceptable.
 Android studio really wanted all the files in master branch so that is where you find all of that.
 Actualy important bits in app/src/main/java/com/example/myapplication in the master branch.
 
-
-🌐 Contents
-
-LineChart
-
-BarChart
-
-PieChart
 
 🚀 Getting Started
 
@@ -84,6 +74,8 @@ Try adding date labels to the X-axis in LineChart
 Change the chart colors and add animations
 
 Create a new activity that combines multiple LineDataSets in one chart
+
+
 
 🎓 Useful Links
 
